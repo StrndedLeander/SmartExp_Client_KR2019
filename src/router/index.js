@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
+import DeviceList from '../views/DeviceList.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,11 @@ const routes = [
     name: 'dashboard',
     component: Dashboard
   },
+  {
+    path: '/devices',
+    name: 'devicelist',
+    component: DeviceList
+  }
 ]
 
 const router = new VueRouter({

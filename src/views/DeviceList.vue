@@ -1,16 +1,10 @@
 <template>
   <div class="deviceList">
+    <div class="filter"></div>
     <div class="columns has-text-centered">
       <div class="column is-8 has-text-centered">
         <div class="regDev" v-for="device in registeredDevices" :key="device.id">
-          <RegisteredDevice
-            :name="device.name"
-            :modell="device.modell"
-            :jahr="device.jahr"
-            :version="device.version"
-            :patchNotes="device.patchNotes"
-            :usage="device.usage"
-          ></RegisteredDevice>
+          <RegisteredDevice :device="device"></RegisteredDevice>
         </div>
       </div>
       <div class="column is-4">
@@ -36,14 +30,14 @@ export default {
       registeredDevices: registeredDevices.hosts.host
     };
   },
-  mounted(){
+  mounted() {
     console.log(registeredDevices);
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.regDev{
+.regDev {
   margin-left: 10%;
   margin-bottom: 3%;
 }

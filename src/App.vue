@@ -13,7 +13,7 @@
               <router-link to="/devices">Meine Geräte</router-link>
             </li>
             <li>
-              <a>Support Anfragen</a>
+              <router-link to="/support">Support Anfragen</router-link>
             </li>
             <li>
               <a>Updates</a>
